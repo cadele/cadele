@@ -1,0 +1,206 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Cadele\n"
+"POT-Creation-Date: 2015-09-11 13:58-0300\n"
+"PO-Revision-Date: 2015-09-11 13:59-0300\n"
+"Last-Translator: Roberto <roberto.tavares.filho@gmail.com>\n"
+"Language-Team: Roberto <roberto.atavares.filho@gmail.com>\n"
+"Language: Portugues\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
+"X-Poedit-Basepath: /home/tavares/Dropbox/projetos2015/scriptsPython\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: cadele\n"
+
+#: cadele/cadele.py:51 cadele/cadele.py:62
+msgid "About Cadele"
+msgstr "Sobre o Cadele"
+
+#: cadele/cadele.py:68
+msgid "Version: 15.09 - Beta - Release date: 2015/09/10"
+msgstr "Versão 15.09 - Beta - Data liberação: 10/09/2015"
+
+#: cadele/cadele.py:72
+msgid "Implement low gain ( < 10) transistor amplifier design"
+msgstr "Implementa projeto amplificador transistorizado baixo ganho (<10)"
+
+#: cadele/cadele.py:77
+msgid "Author: Roberto Tavares"
+msgstr "Autor: Roberto Tavares"
+
+#: cadele/cadele.py:82
+msgid ""
+"For detailed information or author contact:www.cadernodelaboratorio.com.br"
+msgstr ""
+"Para maiores detalhes ou contato com autor: www.cadernodelaboratorio.com.br"
+
+#: cadele/cadele.py:92 cadele/transistorAmp.py:171
+msgid "CLOSE"
+msgstr "Fechar"
+
+#: cadele/cadele.py:131
+msgid "Exit"
+msgstr "Sair"
+
+#: cadele/cadele.py:131
+msgid "Close program"
+msgstr "Fechar programa"
+
+#: cadele/cadele.py:137
+msgid "About"
+msgstr "Sobre"
+
+#: cadele/cadele.py:137
+msgid "Basic info about program"
+msgstr "Informações básicas sobre o programa"
+
+#: cadele/cadele.py:142
+msgid "File"
+msgstr "Arquivo"
+
+#: cadele/cadele.py:143
+msgid "Help"
+msgstr "Ajuda"
+
+#: cadele/cadele.py:164
+msgid "Amplifiers design"
+msgstr "Projeto de amplificadores"
+
+#: cadele/transistorAmp.py:95
+msgid "Amplifier values"
+msgstr "Valores de projeto"
+
+#: cadele/transistorAmp.py:111
+msgid "Amplifier design output data"
+msgstr "Dados de saída do projeto"
+
+#: cadele/transistorAmp.py:118
+msgid "Emiter resistor"
+msgstr "Resistor de emissor"
+
+#: cadele/transistorAmp.py:123
+msgid "Colector  resistor"
+msgstr "Resistor de coletor"
+
+#: cadele/transistorAmp.py:128
+msgid "Upper base resistor"
+msgstr "Resistor de base superior"
+
+#: cadele/transistorAmp.py:134
+msgid "Lower base resistor"
+msgstr "Resistor de base inferior"
+
+#: cadele/transistorAmp.py:140
+msgid "Input capacitor"
+msgstr "Capacitor de entrada"
+
+#: cadele/transistorAmp.py:146
+msgid "Output capacitor"
+msgstr "Capacitor de saída"
+
+#: cadele/transistorAmp.py:152
+msgid "Input impedance"
+msgstr "Impedância de entrada"
+
+#: cadele/transistorAmp.py:158
+msgid "Quiescente current"
+msgstr "Corrente quiescente"
+
+#: cadele/transistorAmp.py:165
+msgid "Please change values and try again"
+msgstr "Por favor troque os valores e tente novamnet"
+
+#: cadele/transistorAmp.py:209
+msgid "Amplifier Specifications"
+msgstr "Especificações do amplificador"
+
+#: cadele/transistorAmp.py:220
+msgid "Amplifier input data"
+msgstr "Dados de entrada do amplificador"
+
+#: cadele/transistorAmp.py:225
+msgid "Amplifier gain"
+msgstr "Ganho do amplificador"
+
+#: cadele/transistorAmp.py:232
+msgid "Load resistence in ohms"
+msgstr "Resistência de carga em ohms"
+
+#: cadele/transistorAmp.py:239
+msgid "Maximum colector voltage in volts"
+msgstr "Tensão máxima do coletor em volts"
+
+#: cadele/transistorAmp.py:245
+msgid "Maximum junction temperature, in celsius degrees"
+msgstr "Temperatura máxima da junção, em graus célcius"
+
+#: cadele/transistorAmp.py:252
+msgid "Stabilty factor, 1-10, 10 for ac coupled circuits, 2 dor DC coupled"
+msgstr ""
+"Fator de estabilização, 1-10 para circuitos acoplamento AC, 2 para "
+"acoplamento DC"
+
+#: cadele/transistorAmp.py:258
+msgid "Transistor beta parameter"
+msgstr "Fator Beta (amplificação de corrente) do transistor"
+
+#: cadele/transistorAmp.py:265
+msgid "Allowable Ic current variation (%)"
+msgstr "Variação permitida na corrente quiescente"
+
+#: cadele/transistorAmp.py:271
+msgid "Peak to peak output voltage (%)"
+msgstr "Tensão de sáida pico a pico "
+
+#: cadele/transistorAmp.py:279
+msgid "Circuit topology (1,2,or 3"
+msgstr "Topologia do circuito (1,2,3)"
+
+#: cadele/transistorAmp.py:286
+msgid "Battery voltage (volts)"
+msgstr "Tensão da bateria (volts)"
+
+#: cadele/transistorAmp.py:292
+msgid "Minimux operational frequency (Hz)"
+msgstr "Frequência mínima de operação"
+
+#: cadele/transistorAmp.py:298
+msgid "Maximum colector current (A)"
+msgstr "Corrente de coletor máxima (A)"
+
+#: cadele/transistorAmp.py:304
+msgid ""
+"For theorical explanation, please visit http://www.cadernodelaboratorio.com."
+"br"
+msgstr "Para explicação teórica, visite http://cadernodelaboratorio.com.br"
+
+#: cadele/transistorAmp.py:359
+msgid "Amplifier Design Selection"
+msgstr "Seleção do amplificador"
+
+#: cadele/transistorAmp.py:368
+msgid "Select the amplifier type"
+msgstr "Selecione o tipo de amplificador"
+
+#: cadele/transistorAmp.py:373
+msgid "Circuit  gain 1-10"
+msgstr "Ganho do circuito 1-10"
+
+#: cadele/transistorAmp.py:432
+msgid "Circuit calculated correctly"
+msgstr "Circuito calculado corretamente"
+
+#: cadele/transistorAmp.py:469
+msgid "Design impossible: Try increase RLw"
+msgstr "Proejto impossível: Tente aumentar Rlw"
+
+#: cadele/transistorAmp.py:488
+msgid "Design impossible: Try increase RLw or lower Vg"
+msgstr "Projeto impossível: Tente aumentar Rlw oudiminuir Vg"
+
+#: cadele/transistorAmp.py:516
+msgid "Design impossible: Try increase Vcc"
+msgstr "Projeto impossível: Tente aumentar Vcc"
