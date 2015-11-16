@@ -43,6 +43,9 @@ __builtin__.__dict__['_'] = wx.GetTranslation
 #imports para execução de projetos
 import transistorAmp
 import valoresPadroes
+import ampOpInversor
+import ampOpDesign
+
 
 class aboutDlg(wx.Dialog):
 
@@ -65,26 +68,31 @@ class aboutDlg(wx.Dialog):
 		
 		
 		
-		self.texto= _("Version: 15.09 - Beta - Release date: 2015/09/10")
+		self.texto= _("Version: 15.09 dev- date: 2015/09/10")
 		self.static1= wx.StaticText(self, -1, self.texto)   
 		self.sizer10.Add(self.static1,flag= wx.ALL| wx.ALIGN_CENTER_HORIZONTAL , border = 10)        
 
 		self.texto= _("Implement low gain ( < 10) transistor amplifier design")
-		self.static1= wx.StaticText(self, -1, self.texto)   
-		self.sizer10.Add(self.static1,flag= wx.ALL| wx.ALIGN_CENTER_HORIZONTAL , border = 10)        
+		self.static2= wx.StaticText(self, -1, self.texto)   
+		self.sizer10.Add(self.static2,flag= wx.ALL| wx.ALIGN_CENTER_HORIZONTAL , border = 10)        
+ 
+ 		self.texto= _("Version: 15.11 dev- date: 2015/11/15")
+		self.static3= wx.StaticText(self, -1, self.texto)   
+		self.sizer10.Add(self.static3,flag= wx.ALL| wx.ALIGN_CENTER_HORIZONTAL , border = 10)        
+
+		self.texto= _("Implement Operational Amplifier inverter design")
+		self.static4= wx.StaticText(self, -1, self.texto)   
+		self.sizer10.Add(self.static4,flag= wx.ALL| wx.ALIGN_CENTER_HORIZONTAL , border = 10)  
     
 					
 		self.texto= _("Author: Roberto Tavares")
-		self.static1= wx.StaticText(self, -1, self.texto)   
-		self.sizer10.Add(self.static1,flag= wx.ALL| wx.ALIGN_CENTER_HORIZONTAL , border = 10)   
+		self.static5= wx.StaticText(self, -1, self.texto)   
+		self.sizer10.Add(self.static5,flag= wx.ALL| wx.ALIGN_CENTER_HORIZONTAL , border = 10)   
 		
 
 		self.texto= _("For detailed information or author contact:www.cadernodelaboratorio.com.br")
-		self.static1= wx.StaticText(self, -1, self.texto)   
-		self.sizer10.Add(self.static1,flag= wx.ALL| wx.ALIGN_CENTER_HORIZONTAL , border = 10)     
-
-
-
+		self.static6= wx.StaticText(self, -1, self.texto)   
+		self.sizer10.Add(self.static6,flag= wx.ALL| wx.ALIGN_CENTER_HORIZONTAL , border = 10)     
 
 
 		
@@ -109,7 +117,7 @@ class aboutDlg(wx.Dialog):
 class MyFrame(wx.Frame):
 	def __init__(self):
 				
-		wx.Frame.__init__(self, None, -1, "CADELE v. 15.09", size=(450, 200))
+		wx.Frame.__init__(self, None, -1, "CADELE 15.11 dev", size=(600, 200))
 				
 		"""
 		tradução das mensagens
@@ -152,7 +160,8 @@ class MyFrame(wx.Frame):
 		bSizer1 = wx.BoxSizer( wx.VERTICAL )   # o painel principal será composto de um sizer vertical com tres elementos
 		
 		#staticTextTitulo é um texto statico que contem o titulo
-		self.panel.staticTextTitulo = wx.StaticText( self.panel, wx.ID_ANY, "Cadele v. 15.09", wx.DefaultPosition, wx.DefaultSize,0 )
+		self.panel.staticTextTitulo = wx.StaticText( self.panel, wx.ID_ANY, "Cadele 15.11", wx.DefaultPosition, wx.DefaultSize,0 )
+
 		self.panel.staticTextTitulo.SetFont( wx.Font( 16, 74, 90, 92, False, "Sans" ) )
 		bSizer1.Add(self.panel.staticTextTitulo, 0, wx.ALIGN_CENTER | wx.ALL, 1 )
 		
@@ -161,9 +170,13 @@ class MyFrame(wx.Frame):
 		
 		#inserimos os botoes que chamam os diferentes scripts de projeto
 		#criamos o botão de proejto amplificadores transistorizados e o adicionamos ao sizer 2
-		self.panel.btnAmplificadoresT = wx.Button( self.panel, wx.ID_ANY, _("Amplifiers design"), wx.DefaultPosition, wx.DefaultSize, 0 )
-		bSizer2.Add( self.panel.btnAmplificadoresT, 0, wx.ALIGN_CENTER | wx.ALL, 1 ) 
+		self.panel.btnAmplificadoresT = wx.Button( self.panel, wx.ID_ANY, _("BJT Amplifiers design"), wx.DefaultPosition, wx.DefaultSize, 0 )
+		bSizer2.Add( self.panel.btnAmplificadoresT, 0, wx.ALIGN_CENTER | wx.ALL, 10)
 		
+		self.panel.btnAmplificadorOperacional = wx.Button( self.panel, wx.ID_ANY, _("Amp Op Design"), wx.DefaultPosition, wx.DefaultSize, 0 )
+		bSizer2.Add( self.panel.btnAmplificadorOperacional, 0, wx.ALIGN_CENTER | wx.ALL, 10 ) 
+
+				
 		
 		#inserimos o sizer bSizer2 no sizer vertical principal, com flag ajustado para centralizar 
 		bSizer1.Add( bSizer2, 1, wx.ALIGN_CENTER_HORIZONTAL)
@@ -174,7 +187,7 @@ class MyFrame(wx.Frame):
 		
 		# Associamos os botões aos processos corrrespodentes
 		self.panel.btnAmplificadoresT.Bind( wx.EVT_BUTTON, self.OnSelAmplifier)
-		
+		self.panel.btnAmplificadorOperacional.Bind( wx.EVT_BUTTON, self.OnSelAmplificadorOperacional)
 
 	def OnAbout(self,event):
 		self.aboutDlg = aboutDlg()      #cria um dialogo de solicitacao de IP
@@ -183,6 +196,45 @@ class MyFrame(wx.Frame):
 		
 	def OnExit(self, event):   #ao se clicar sobre o menu mnuSair, ese método é chamado e fecha o programa
 		self.Close()
+
+
+
+
+	def OnSelAmplificadorOperacional(self,event):
+		
+		self.dialogo = ampOpDesign.SelAmpOpDesign()      #cria um dialogo de solicitacao de IP
+		
+		self.result = self.dialogo.ShowModal() 
+
+				
+		if self.result == wx.ID_OK:  
+			if self.dialogo.GetSelection() == ampOpDesign.BTN_AMPLIFICADOR_INVERSOR:
+				 ampOpInversor.ampOpInverterAmplifierDesign()
+				 
+				
+			if self.dialogo.GetSelection() == ampOpDesign.BTN_AMPLIFICADOR_NAO_INVERSOR:
+				print _("not inverter to be implemented")				
+				
+			if self.dialogo.GetSelection() == ampOpDesign.BTN_AMPLIFICADOR_DE_CORRENTE:
+				print _("current to be implemented")	
+			
+			if self.dialogo.GetSelection() == ampOpDesign.BTN_AMPLIFICADOR_DE_TRANSCONDUTANCIA:
+				print _("transcondutance to be implemented")	
+
+			if self.dialogo.GetSelection() == ampOpDesign.BTN_AMPLIFICADOR_INVERSOR_AC:
+				print _("ac inverter to be implemented")				
+			
+			if self.dialogo.GetSelection() == ampOpDesign.BTN_AMPLIFICADOR_SENSIVEL__CARGA:
+				print _("charge to be implemented")	
+
+			if self.dialogo.GetSelection() == ampOpDesign.BTN_AMPLIFICADOR_SOMADOR:
+				print _("adder to be implemented")	
+
+
+			
+		self.dialogo.Destroy()
+
+
 
 
 	def OnSelAmplifier(self,event):
@@ -253,6 +305,10 @@ class MyFrame(wx.Frame):
 		self.dialogo.Destroy()
 
 		
+
+
+
+
 
 
 if __name__ == '__main__':

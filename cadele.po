@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Cadele\n"
-"POT-Creation-Date: 2015-09-11 13:58-0300\n"
-"PO-Revision-Date: 2015-09-11 13:59-0300\n"
-"Last-Translator: Roberto <roberto.tavares.filho@gmail.com>\n"
+"POT-Creation-Date: 2015-11-16 15:22-0300\n"
+"PO-Revision-Date: 2015-11-16 15:48-0300\n"
+"Last-Translator: Roberto Tavares <roberto.tavares.filho@gmail.com>\n"
 "Language-Team: Roberto <roberto.atavares.filho@gmail.com>\n"
 "Language: Portugues\n"
 "MIME-Version: 1.0\n"
@@ -15,59 +15,172 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: cadele\n"
 
-#: cadele/cadele.py:51 cadele/cadele.py:62
+#: cadele/cadele.py:54 cadele/cadele.py:65
 msgid "About Cadele"
 msgstr "Sobre o Cadele"
 
-#: cadele/cadele.py:68
-msgid "Version: 15.09 - Beta - Release date: 2015/09/10"
-msgstr "Versão 15.09 - Beta - Data liberação: 10/09/2015"
+#: cadele/cadele.py:71
+msgid "Version: 15.09 dev- date: 2015/09/10"
+msgstr "Versão 15.09 - dev - Data : 10/09/2015"
 
-#: cadele/cadele.py:72
+#: cadele/cadele.py:75
 msgid "Implement low gain ( < 10) transistor amplifier design"
 msgstr "Implementa projeto amplificador transistorizado baixo ganho (<10)"
 
-#: cadele/cadele.py:77
+#: cadele/cadele.py:79
+msgid "Version: 15.11 dev- date: 2015/11/15"
+msgstr "Versão 15.11 dev - Data : 15/11/2015"
+
+#: cadele/cadele.py:83
+msgid "Implement Operational Amplifier inverter design"
+msgstr "Implementa o projeto de amplificador inversor com AmpOp"
+
+#: cadele/cadele.py:88
 msgid "Author: Roberto Tavares"
 msgstr "Autor: Roberto Tavares"
 
-#: cadele/cadele.py:82
+#: cadele/cadele.py:93
 msgid ""
 "For detailed information or author contact:www.cadernodelaboratorio.com.br"
 msgstr ""
 "Para maiores detalhes ou contato com autor: www.cadernodelaboratorio.com.br"
 
-#: cadele/cadele.py:92 cadele/transistorAmp.py:171
+#: cadele/cadele.py:100 cadele/ampOpInversor.py:341
+#: cadele/transistorAmp.py:171
 msgid "CLOSE"
 msgstr "Fechar"
 
-#: cadele/cadele.py:131
+#: cadele/cadele.py:139
 msgid "Exit"
 msgstr "Sair"
 
-#: cadele/cadele.py:131
+#: cadele/cadele.py:139
 msgid "Close program"
 msgstr "Fechar programa"
 
-#: cadele/cadele.py:137
+#: cadele/cadele.py:145
 msgid "About"
 msgstr "Sobre"
 
-#: cadele/cadele.py:137
+#: cadele/cadele.py:145
 msgid "Basic info about program"
 msgstr "Informações básicas sobre o programa"
 
-#: cadele/cadele.py:142
+#: cadele/cadele.py:150
 msgid "File"
 msgstr "Arquivo"
 
-#: cadele/cadele.py:143
+#: cadele/cadele.py:151
 msgid "Help"
 msgstr "Ajuda"
 
-#: cadele/cadele.py:164
-msgid "Amplifiers design"
-msgstr "Projeto de amplificadores"
+#: cadele/cadele.py:173
+msgid "BJT Amplifiers design"
+msgstr "Projeto de amplificadores BJT"
+
+#: cadele/cadele.py:176
+msgid "Amp Op Design"
+msgstr "Projeto de amplificadores operacionais"
+
+#: cadele/cadele.py:216
+msgid "not inverter to be implemented"
+msgstr "Não inversor. Em implementação"
+
+#: cadele/cadele.py:219
+msgid "current to be implemented"
+msgstr "Amplificador corrente. Em implementação"
+
+#: cadele/cadele.py:222
+msgid "transcondutance to be implemented"
+msgstr "Amp, Trabscondutancia - Em implementação"
+
+#: cadele/cadele.py:225
+msgid "ac inverter to be implemented"
+msgstr "Amplificador inversor AC- Em implemetação"
+
+#: cadele/cadele.py:228
+msgid "charge to be implemented"
+msgstr "Amplificador de carga. Em implementação"
+
+#: cadele/cadele.py:231
+msgid "adder to be implemented"
+msgstr "Amplificador somador. Em implementação"
+
+#: cadele/ampOpInversor.py:97
+msgid "Inverter Amplifier Specifications"
+msgstr "Especificações do amplificador inversor"
+
+#: cadele/ampOpInversor.py:108
+msgid "Input Data"
+msgstr "Dados de entrada"
+
+#: cadele/ampOpInversor.py:113
+msgid "Circuito closed gain"
+msgstr "Ganho do circuito malha fechada"
+
+#: cadele/ampOpInversor.py:120
+msgid "Minimum input resistence, ohms"
+msgstr "Resistência de entrada mínima  em ohms"
+
+#: cadele/ampOpInversor.py:127
+msgid "Minimum Load resistence, ohms"
+msgstr "Resistência de carga mínima, em ohms"
+
+#: cadele/ampOpInversor.py:163
+msgid "Differential input resistence (Megaohms)"
+msgstr "Resistencia diferencial de entrada (Megaohms)"
+
+#: cadele/ampOpInversor.py:169
+msgid "Operational amplifier open loop gain"
+msgstr "Ganho em malha aberta do operacional"
+
+#: cadele/ampOpInversor.py:176
+msgid "First pole frequency of amp op(hz)"
+msgstr "Frequência do primeiro polo do amp. op. (Hz)"
+
+#: cadele/ampOpInversor.py:183
+msgid "Output resistence of amp op(ohms)"
+msgstr "Resistência de saída do ampop em ohms"
+
+#: cadele/ampOpInversor.py:217
+msgid "Resistors 1% tol"
+msgstr "Resistores 1% tol."
+
+#: cadele/ampOpInversor.py:218
+msgid "Resistors 5% tol"
+msgstr "Resistores 5% tol."
+
+#: cadele/ampOpInversor.py:283
+msgid "Circuito values"
+msgstr "Valores do circuito"
+
+#: cadele/ampOpInversor.py:292
+msgid "AmpOp inverter design output data"
+msgstr "Dados de saída do amplificador inversor com AmpOp"
+
+#: cadele/ampOpInversor.py:299
+msgid "Circuit input resistor"
+msgstr "Resistor de entrada do circuito"
+
+#: cadele/ampOpInversor.py:304
+msgid "Circuit feedback resistor"
+msgstr "Resistor de realimentação do circuito"
+
+#: cadele/ampOpInversor.py:309
+msgid "Circuit load resistence"
+msgstr "Resistência de carga do circuito"
+
+#: cadele/ampOpInversor.py:314
+msgid "Circuit offset resistor"
+msgstr "Resistor de compensação de offset"
+
+#: cadele/ampOpInversor.py:331
+msgid "Small signal bandwidth"
+msgstr "Banda de passagem para pequenos sinais"
+
+#: cadele/ampOpInversor.py:337
+msgid "Small signal risetime"
+msgstr "Tempo de subida para pequenos sinais"
 
 #: cadele/transistorAmp.py:95
 msgid "Amplifier values"
@@ -204,3 +317,39 @@ msgstr "Projeto impossível: Tente aumentar Rlw oudiminuir Vg"
 #: cadele/transistorAmp.py:516
 msgid "Design impossible: Try increase Vcc"
 msgstr "Projeto impossível: Tente aumentar Vcc"
+
+#: cadele/ampOpDesign.py:62
+msgid "Operational Amplifier Circuits Selection"
+msgstr "Seleção do circuito com Amplificador Operacional"
+
+#: cadele/ampOpDesign.py:80
+msgid "Select the circuit type"
+msgstr "Selecione o tipo de circuito"
+
+#: cadele/ampOpDesign.py:85
+msgid "Inverter amplifier"
+msgstr "Amplificador inversor"
+
+#: cadele/ampOpDesign.py:86
+msgid "Non inverter amplifier"
+msgstr "Amplificador não inversor "
+
+#: cadele/ampOpDesign.py:87 cadele/ampOpDesign.py:90
+msgid "Current amplifier"
+msgstr "Amplificador de corrente"
+
+#: cadele/ampOpDesign.py:88
+msgid "Transcondutance amplifier"
+msgstr "Amplificador Transcondutância "
+
+#: cadele/ampOpDesign.py:89
+msgid "AC inverter amplifier"
+msgstr "Amplificador Inversor AC"
+
+#: cadele/ampOpDesign.py:91
+msgid "Charge amplifier"
+msgstr "Amplificador Carga"
+
+#: cadele/ampOpDesign.py:92
+msgid "Summing amplifier"
+msgstr "Amplificador somador"

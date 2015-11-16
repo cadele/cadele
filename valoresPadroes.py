@@ -33,12 +33,17 @@
 from numpy  import *
 
 """
+17/02/2015 
 Este script retorna o valor padrão corresponde as séries E12, E24 e E96, aplicadas a resistores
 valorOriginal. Valor original em ohm
 tolerancia: pode ser 10, 5 e 1 , correspondendo a 10%, 5% e 1% respectivamente
 seleção: Se 0 -> retorna o valor mais próximo
          Se 1 -> retorna o valor imediatamente inferior
 		 Se 2 -> retorna o valor imediatamente superior
+
+10/09/2015
+Acrescentado retorno de valores padrões de capacitores eletrolíticos
+
 """
 
 def retornaValorResistor (valorOriginal,tolerancia,selecao):
@@ -101,7 +106,7 @@ seleção: Se 0 -> retorna o valor mais próximo
 """
 
 def retornaValorEletrolitico (valorOriginal,selecao):
-		capArray= array([1, 2.2 , 3.3 ,4.7,10,22,33,47,100,220,330,470,1000,2200,3300,4700,10000,47000])
+		capArray= array([0.47,1, 2.2 , 3.3 ,4.7,10,22,33,47,100,220,330,470,1000,2200,3300,4700,10000,47000])
 	
 		indice= searchsorted(capArray, valorOriginal)
 		
