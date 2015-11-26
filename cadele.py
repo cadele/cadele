@@ -43,8 +43,9 @@ __builtin__.__dict__['_'] = wx.GetTranslation
 #imports para execução de projetos
 import transistorAmp
 import valoresPadroes
-import ampOpInversor
 import ampOpDesign
+import ampOpInversor
+import ampOpNaoInversor
 
 
 class aboutDlg(wx.Dialog):
@@ -80,10 +81,18 @@ class aboutDlg(wx.Dialog):
 		self.static3= wx.StaticText(self, -1, self.texto)   
 		self.sizer10.Add(self.static3,flag= wx.ALL| wx.ALIGN_CENTER_HORIZONTAL , border = 10)        
 
-		self.texto= _("Implement Operational Amplifier inverter design")
+		self.texto= _("Implement OpAmp inverter amplifier design")
 		self.static4= wx.StaticText(self, -1, self.texto)   
 		self.sizer10.Add(self.static4,flag= wx.ALL| wx.ALIGN_CENTER_HORIZONTAL , border = 10)  
     
+
+		self.texto= _("Version: 15.11a dev- date: 2015/11/25")
+		self.static3= wx.StaticText(self, -1, self.texto)   
+		self.sizer10.Add(self.static3,flag= wx.ALL| wx.ALIGN_CENTER_HORIZONTAL , border = 10)        
+
+		self.texto= _("Implement OpAmp non inverter amplifier design")
+		self.static4= wx.StaticText(self, -1, self.texto)   
+		self.sizer10.Add(self.static4,flag= wx.ALL| wx.ALIGN_CENTER_HORIZONTAL , border = 10)  
 					
 		self.texto= _("Author: Roberto Tavares")
 		self.static5= wx.StaticText(self, -1, self.texto)   
@@ -117,7 +126,7 @@ class aboutDlg(wx.Dialog):
 class MyFrame(wx.Frame):
 	def __init__(self):
 				
-		wx.Frame.__init__(self, None, -1, "CADELE 15.11 dev", size=(600, 200))
+		wx.Frame.__init__(self, None, -1, "CADELE 15.11a dev", size=(600, 200))
 				
 		"""
 		tradução das mensagens
@@ -160,7 +169,7 @@ class MyFrame(wx.Frame):
 		bSizer1 = wx.BoxSizer( wx.VERTICAL )   # o painel principal será composto de um sizer vertical com tres elementos
 		
 		#staticTextTitulo é um texto statico que contem o titulo
-		self.panel.staticTextTitulo = wx.StaticText( self.panel, wx.ID_ANY, "Cadele 15.11", wx.DefaultPosition, wx.DefaultSize,0 )
+		self.panel.staticTextTitulo = wx.StaticText( self.panel, wx.ID_ANY, "Cadele 15.11a", wx.DefaultPosition, wx.DefaultSize,0 )
 
 		self.panel.staticTextTitulo.SetFont( wx.Font( 16, 74, 90, 92, False, "Sans" ) )
 		bSizer1.Add(self.panel.staticTextTitulo, 0, wx.ALIGN_CENTER | wx.ALL, 1 )
@@ -213,7 +222,7 @@ class MyFrame(wx.Frame):
 				 
 				
 			if self.dialogo.GetSelection() == ampOpDesign.BTN_AMPLIFICADOR_NAO_INVERSOR:
-				print _("not inverter to be implemented")				
+				ampOpNaoInversor.ampOpNoInverterAmplifierDesign()				
 				
 			if self.dialogo.GetSelection() == ampOpDesign.BTN_AMPLIFICADOR_DE_CORRENTE:
 				print _("current to be implemented")	

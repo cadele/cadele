@@ -267,7 +267,7 @@ class entradaInversorAmpOp(wx.Dialog):
 		return self.rlTxt.GetValue()
 		
 	def GetTol(self):
-		if self.rb1.GetValue == True:
+		if self.rb1.GetValue() == True:
 			return 1
 		else:
 			return 5	
